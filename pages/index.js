@@ -24,6 +24,9 @@ export default function Home() {
       <Objective/>
       <Clients/>
       <Services/>
+      <section id='telecom'>
+        
+      </section>
     </>
   )
 }
