@@ -16,7 +16,8 @@ export default function SwiperContainer({imgs}){
         loop
         modules={[Autoplay]}
         autoplay={{
-            delay: 5000
+            delay: 5000,
+            disableOnInteraction: false
         }}
         >
             <button className='swipe-left' onClick={() => swiper.slidePrev()}>

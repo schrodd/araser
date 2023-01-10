@@ -8,6 +8,7 @@ import Objective from '../components/Objective'
 import Clients from '../components/Clients'
 import Services from '../components/Services'
 import ServicesDetails from '../components/ServicesDetails'
+import ServiceAssistance from '../components/ServiceAssistance'
 
 export default function Home() {
   
@@ -27,6 +28,7 @@ export default function Home() {
       <Clients/>
       <Services/>
       <ServicesDetails/>
+      <ServiceAssistance/>
     </>
   )
 }
