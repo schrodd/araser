@@ -9,6 +9,7 @@ import Clients from '../components/Clients'
 import Services from '../components/Services'
 import ServicesDetails from '../components/ServicesDetails'
 import ServiceAssistance from '../components/ServiceAssistance'
+import Projects from '../components/Projects'
 
 export default function Home() {
   
@@ -29,6 +30,7 @@ export default function Home() {
       <Services/>
       <ServicesDetails/>
       <ServiceAssistance/>
+      <Projects/>
     </>
   )
 }
