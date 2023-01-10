@@ -24,11 +24,12 @@ export default function SwiperContainer({imgs}){
             </button>
             {imgs.map((e,i) => (
                 <SwiperSlide key={i}>
-                    <img src={e.src} alt={e.title}/>
-                    <div className='slide-title'>
-                        
-                        <p>{e.title}</p>
-                    </div>
+                    <img src={e.src} alt={e.title ? e.title : 'swiper image'}/>
+                    {e.title && (
+                        <div className='slide-title'>
+                            <p>{e.title}</p>
+                        </div>
+                    )}
                 </SwiperSlide>
             ))}
             <button className='swipe-right' onClick={() => swiper.slideNext()}>

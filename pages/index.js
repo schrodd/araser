@@ -7,8 +7,10 @@ import Values from '../components/Values'
 import Objective from '../components/Objective'
 import Clients from '../components/Clients'
 import Services from '../components/Services'
+import ServicesDetails from '../components/ServicesDetails'
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -24,9 +26,7 @@ export default function Home() {
       <Objective/>
       <Clients/>
       <Services/>
-      <section id='telecom'>
-        
-      </section>
+      <ServicesDetails/>
     </>
   )
 }
