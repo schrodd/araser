@@ -1,5 +1,6 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import SwiperContainer from '../SwiperContainer'
+import {motion} from 'framer-motion'
 
 export default function Introduction(){
     const introImg = [
@@ -19,7 +20,11 @@ export default function Introduction(){
     return (
         <section id="introduction">
             <SwiperContainer imgs={introImg}/>
-            <div className="text">
+            <motion.div 
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}  
+            transition={{duration: .8}}
+            className="text">
             <p>Ofrecemos una amplia gama de servicios que incluyen Telecomunicaciones, Obras y reformas edilicias, y mantenimiento integral correctivo y preventivo.</p>
             <a href="#">
                 <button className="btn white">
@@ -27,7 +32,7 @@ export default function Introduction(){
                 <ArrowForwardIcon/>
                 </button>
             </a>
-            </div>
+            </motion.div>
         </section>
     )
 }

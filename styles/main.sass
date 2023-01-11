@@ -23,6 +23,8 @@ $border: 5px solid white
 
 html
     scroll-behavior: smooth
+    &:root
+        --swiper-theme-color: #fff
 
 a, a:link
     color: inherit
@@ -100,7 +102,7 @@ body
     .swipe-left, .swipe-right
         position: absolute
         bottom: 0
-        z-index: 2
+        z-index: 50
         margin: 0 5px 4px 5px
         &:hover
             transform: scale(1.5)
@@ -160,6 +162,8 @@ section#introduction
     padding: 0 $sectionpadding
     filter: $filtershadow
     margin-bottom: 100px
+    .swiper-pagination
+        display: none
     .text
         padding-left: 60px
         p
@@ -658,9 +662,9 @@ section#projects
                 height: 40px
                 color: $cyan
         .project-desc
-            margin-top: 50px
-            max-width: 600px
-            background: white
+            margin-top: 30px
+            width: 600px
+            background: $whitetransp
             padding: 40px
             filter: $filtershadow
             border-radius: $radius
@@ -668,9 +672,23 @@ section#projects
                 font-size: 26px
                 font-weight: 400
                 margin-bottom: 10px
+            p
+                margin-bottom: 0
         .buttons
-            margin-top: 20px
+            margin-top: 30px
             display: flex
+            gap: 5px
+            div
+                display: flex
+                justify-content: center
+                align-items: center
+                background: white
+                border: 2px solid $blue
+                &:hover
+                    background: $blue
+                    color: white
+                &.disabled
+                    opacity: .2
     .swiper
         margin: 0
         max-width: 600px

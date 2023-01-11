@@ -2,8 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useState } from 'react';
-import { Autoplay } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/pagination'
 
 export default function SwiperContainer({imgs}){
     const [swiper, setSwiper] = useState(null)
@@ -14,7 +15,8 @@ export default function SwiperContainer({imgs}){
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => setSwiper(swiper)}
         loop
-        modules={[Autoplay]}
+        pagination={{clickable: true}}
+        modules={[Autoplay, Pagination]}
         autoplay={{
             delay: 5000,
             disableOnInteraction: false

@@ -32,11 +32,11 @@ export default function Projects(){
                 <div className='buttons'>
                     <div className={`prev ${projectIndex == 0 && 'disabled'}`}
                     onClick={() => changeProject('prev')}>
-                        <ChevronLeftIcon/>
+                        <ChevronLeftIcon fontSize='large'/>
                     </div>
                     <div className={`next ${!projects[projectIndex + 1] && 'disabled'}`}
                     onClick={() => changeProject('next')}>
-                        <ChevronRightIcon/>
+                        <ChevronRightIcon fontSize='large'/>
                     </div>
                 </div>
             </div>
