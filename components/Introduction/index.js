@@ -6,16 +6,16 @@ import anims from '../../content/framermotion'
 export default function Introduction(){
     const introImg = [
         {
-            src: '/img/intro.webp',
+            src: '/img/1refed.webp',
+            title: 'Reformas Edilicias'
+        },
+        {
+            src: '/img/2mantint.webp',
             title: 'Mantenimiento Integral'
         },
         {
-            src: '/img/intro.webp',
-            title: 'Otro titulo'
-        },
-        {
-            src: '/img/intro.webp',
-            title: 'Un tercer título'
+            src: '/img/3telecom.webp',
+            title: 'Telecomunicaciones'
         }
     ]
     return (

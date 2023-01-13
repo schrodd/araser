@@ -11,6 +11,7 @@ import anims from '../../content/framermotion'
 export default function Services(){ 
     return (
         <section id='services'>
+            <a style={{position: 'relative', top: '-100px'}} id='servicios-anchor'></a>
             <div className="title">
             <ConstructionIcon/>
             <h2>Servicios</h2>
