@@ -12,7 +12,7 @@ export default function SwiperContainer({imgs}){
         <Swiper
         // spaceBetween={50}
         // slidesPerView={3}
-        onSlideChange={() => console.log('slide change')}
+        // onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => setSwiper(swiper)}
         loop
         pagination={{clickable: true}}

@@ -10,12 +10,14 @@ import Services from '../components/Services'
 import ServicesDetails from '../components/ServicesDetails'
 import ServiceAssistance from '../components/ServiceAssistance'
 import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 
 export default function Home() {
   
   return (
     <>
       <Head>
+        <script>history.scrollRestoration = "manual"</script>
         <title>Araser SRL | Telecomunicaciones y Obras Edilicias</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -31,6 +33,7 @@ export default function Home() {
       <ServicesDetails/>
       <ServiceAssistance/>
       <Projects/>
+      <Contact/>
     </>
   )
 }

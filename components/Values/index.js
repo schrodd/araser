@@ -1,24 +1,68 @@
 import MapIcon from '@mui/icons-material/Map';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { motion } from 'framer-motion'
+import anims from '../../content/framermotion';
 
 export default function Values(){
+    const n = 100
+    const valuesVariants = {
+        hiddenLeft: {
+            opacity: 0,
+            x: n*-1
+        },
+        hiddenRight: {
+            opacity: 0,
+            x: n
+        },
+        hiddenDown: {
+            opacity: 0,
+            y: n
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            y: 0,
+        },
+        hover: {
+            y: -10,
+            scale: 1.03,
+        }
+    }
     return (
         <section id='mision-vision-valores'>
             <div className='wrapper'>
-                <div className='mision'>
+                <motion.div
+                variants={valuesVariants}
+                initial='hiddenLeft'
+                whileInView='visible'
+                whileHover='hover'
+                transition={{duration: .7}}
+                className='mision'>
                     <MapIcon/>
                     <h2>Misión</h2>
                     <p>Gestión, conservación y creación de todo tipo de infraestructuras, contribuyendo al bienestar social, desarrollo sostenible y generación de valor para nuestros clientes con el propósito de alcanzar la excelencia en nuestros servicios, gracias al compromiso de nuestros profesionales.</p>
-                </div>
-                <div className='vision'>
+                </motion.div>
+                <motion.div
+                variants={valuesVariants}
+                initial='hiddenRight'
+                whileInView='visible'
+                whileHover='hover'
+                transition={{duration: .7}}
+                className='vision'>
                     <VisibilityIcon/>
                     <h2>Visión</h2>
                     <p>Ser reconocidos como una empresa líder en el ámbito nacional e internacional en la prestación de servicios de telecomunicaciones, obras edilicias y mantenimiento integral en empresas y entidades bancarias.</p>
                     <p>Ser referentes por la calidad de nuestros servicios.</p>
                     <p>Alcanzar una cultura de mejora continua mediante la innovación y favorecer el desarrollo personal y profesional de cada uno de los profesionales que forman nuestro equipo.</p>
-                </div>
-                <div className='valores'>
+                </motion.div>
+                <motion.div
+                variants={valuesVariants}
+                initial='hiddenDown'
+                whileInView='visible'
+                whileHover='hover'
+                transition={{duration: .7}}
+                className='valores'>
                     <div className='left'>
                     <FavoriteIcon/>
                     <h2>Valores</h2>
@@ -44,7 +88,7 @@ export default function Values(){
                         <p>No somos diferentes al resto de empresas, somos únicos, porque nuestra prestación de servicios y nuestro compromiso es llegar a la satisfacción del cliente.</p>
                     </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
