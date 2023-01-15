@@ -730,7 +730,7 @@ section#projects
                 max-height: 500px
 
 section#contact
-    margin-bottom: 500px
+    margin-bottom: 120px
     filter: $filtershadow
     .title
         display: flex
@@ -804,3 +804,67 @@ section#contact
                         color: $blue
                     svg
                         margin-left: 5px
+
+footer
+    position: relative
+    background: $bluetransp
+    padding: 20px $sectionpadding
+    color: white
+    h3, h4
+        font-weight: 400
+        width: 100%
+    h3
+        padding-bottom: 5px
+        margin-bottom: 10px
+        border-bottom: 1px solid white
+        font-size: 16px
+    h4
+        font-size: 14px
+    p, a
+        font-weight: 200
+        font-size: 12px
+    li a
+        &:hover
+            font-weight: 400
+        &:before
+            content:'· '
+    img.bg-svg
+            position: absolute
+            bottom: 0
+            right: 0
+            height: 100%
+            opacity: .03
+    .wrapper
+        display: flex
+        gap: 20px
+        .col
+            display: flex
+            flex-direction: column
+            img.logo
+                width: 40px
+                height: 40px
+            .item
+                margin: 10px 0
+                .social
+                    filter: brightness(10)
+                    a
+                        margin-right: 5px
+            &.one
+                flex: 1
+            &.two
+                flex: 1.5
+                .btn
+                    background: white
+                    color: $blue
+                    font-weight: 600
+                    font-size: 12px
+                    align-self: flex-end
+                    padding: 5px 9px
+                    svg
+                        width: 15px
+                        height: 15px
+            &.map
+                flex: 2
+        .google-map
+            height: 100%
+            width: 100%
