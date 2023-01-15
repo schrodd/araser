@@ -23,8 +23,8 @@ export default function NavBar(){
             <nav>
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#about-us">Nosotros</a></li>
-                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#nosotros-anchor">Nosotros</a></li>
+                    <li><a href="#servicios-anchor">Servicios</a></li>
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>

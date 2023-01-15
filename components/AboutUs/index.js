@@ -6,6 +6,7 @@ import anims from '../../content/framermotion'
 export default function AboutUs(){
     return (
         <section id='about-us'>
+            <a style={{position: 'relative', top: '-100px'}} id='nosotros-anchor'></a>
             <div className='icon-title'>
                 <ApartmentIcon fontSize='large'/>
                 <h2>Sobre nosotros</h2>
