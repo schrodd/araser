@@ -2,9 +2,10 @@ import MapIcon from '@mui/icons-material/Map';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { motion } from 'framer-motion'
-import anims from '../../content/framermotion';
+import getTexts from '../../content/translations';
+import anims from '../../content/framermotion'
 
-export default function Values(){
+export default function Values({lang}){
     const n = 100
     const valuesVariants = {
         hiddenLeft: {
@@ -33,61 +34,69 @@ export default function Values(){
         <section id='mision-vision-valores'>
             <div className='wrapper'>
                 <motion.div
-                variants={valuesVariants}
-                initial='hiddenLeft'
+                variants={anims.container}
+                initial='hidden'
                 whileInView='visible'
                 whileHover='hover'
                 transition={{duration: .7}}
                 className='mision'>
                     <MapIcon/>
-                    <h2>Misión</h2>
-                    <p>Gestión, conservación y creación de todo tipo de infraestructuras, contribuyendo al bienestar social, desarrollo sostenible y generación de valor para nuestros clientes con el propósito de alcanzar la excelencia en nuestros servicios, gracias al compromiso de nuestros profesionales.</p>
+                    <motion.h2 variants={anims.item}>{getTexts(lang, 'mission')}</motion.h2>
+                    <motion.p variants={anims.item}>{getTexts(lang, 'mission1')}</motion.p>
                 </motion.div>
                 <motion.div
-                variants={valuesVariants}
-                initial='hiddenRight'
+                variants={anims.container}
+                initial='hidden'
                 whileInView='visible'
                 whileHover='hover'
                 transition={{duration: .7}}
                 className='vision'>
                     <VisibilityIcon/>
-                    <h2>Visión</h2>
-                    <p>Ser reconocidos como una empresa líder en el ámbito nacional e internacional en la prestación de servicios de telecomunicaciones, obras edilicias y mantenimiento integral en empresas y entidades bancarias.</p>
-                    <p>Ser referentes por la calidad de nuestros servicios.</p>
-                    <p>Alcanzar una cultura de mejora continua mediante la innovación y favorecer el desarrollo personal y profesional de cada uno de los profesionales que forman nuestro equipo.</p>
+                    <motion.h2 variants={anims.item}>{getTexts(lang, 'vision')}</motion.h2>
+                    <motion.p variants={anims.item}>{getTexts(lang, 'vision1')}</motion.p>
+                    {/* <motion.p variants={anims.item}>{getTexts(lang, 'vision2')}</motion.p>
+                    <motion.p variants={anims.item}>{getTexts(lang, 'vision3')}</motion.p> */}
                 </motion.div>
                 <motion.div
-                variants={valuesVariants}
-                initial='hiddenDown'
+                variants={anims.container}
+                initial='hidden'
                 whileInView='visible'
                 whileHover='hover'
                 transition={{duration: .7}}
                 className='valores'>
-                    <div className='left'>
                     <FavoriteIcon/>
-                    <h2>Valores</h2>
-                    <p>En ARASER hemos conseguido unir cuatro valores fundamentales:</p>
-                    <p>Proximidad, Autenticidad, Solvencia y Excelencia.</p>
-                    <p>Éstos se han convertido en pilares básicos para conseguir nuestros objetivos, con la capacidad de ser una Empresa competitiva, innovadora y comprometida con cada uno de nuestros clientes.</p>
-                    </div>
-                    <div className='right'>
-                    <div className='item'>
-                        <h3>Proximidad</h3>
-                        <p>Cercanía con cada uno de nuestros clientes, para conseguir ofrecer un servicio personalizado y la confianza necesaria en el desarrollo de cada uno de nuestros proyectos, compartiendo sus necesidades y haciendo sus problemas nuestros. Siendo proactivos y aportando las soluciones necesarias.</p>
-                    </div>
-                    <div className='item'>
-                        <h3>Excelencia</h3>
-                        <p>Desde el inicio de la actividad hemos realizado los esfuerzos necesarios para ofrecer una mayor variedad de servicios, mejorando la calidad y recorriendo continuamente los caminos necesarios para continuar avanzando, invirtiendo en todos aquellos mecanismos que nos proporcionen mayor eficiencia cada día.</p>
-                    </div>
-                    <div className='item'>
-                        <h3>Solvencia</h3>
-                        <p>Nuestra trayectoria como empresa se traduce en fortaleza y estabilidad, generando confianza a nuestros clientes y proveedores.</p>
-                    </div>
-                    <div className='item'>
-                        <h3>Autenticidad</h3>
-                        <p>No somos diferentes al resto de empresas, somos únicos, porque nuestra prestación de servicios y nuestro compromiso es llegar a la satisfacción del cliente.</p>
-                    </div>
-                    </div>
+                    <motion.h2 variants={anims.item}>{getTexts(lang, 'values')}</motion.h2>
+                    <motion.p variants={anims.item}>{getTexts(lang, 'values1')}</motion.p>
+                    <motion.p variants={anims.item}><b>{getTexts(lang, 'values2')}</b></motion.p>
+                    <motion.p variants={anims.item}>{getTexts(lang, 'values3')}</motion.p>
+                </motion.div>
+                <motion.div
+                variants={anims.container}
+                initial='hidden'
+                whileInView='visible'
+                whileHover='hover'
+                transition={anims.transition}
+                className='valores-desc'>
+                    <motion.div variants={anims.item} className='item'>
+                        <FavoriteIcon/>
+                        <h3>{getTexts(lang, 'prox')}</h3>
+                        <p>{getTexts(lang, 'prox1')}</p>
+                    </motion.div>
+                    <motion.div variants={anims.item} className='item'>
+                        <FavoriteIcon/>
+                        <h3>{getTexts(lang, 'exc')}</h3>
+                        <p>{getTexts(lang, 'exc1')}</p>
+                    </motion.div>
+                    <motion.div variants={anims.item} className='item'>
+                        <FavoriteIcon/>
+                        <h3>{getTexts(lang, 'solv')}</h3>
+                        <p>{getTexts(lang, 'solv1')}</p>
+                    </motion.div>
+                    <motion.div variants={anims.item} className='item'>
+                        <FavoriteIcon/>
+                        <h3>{getTexts(lang, 'aut')}</h3>
+                        <p>{getTexts(lang, 'aut1')}</p>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

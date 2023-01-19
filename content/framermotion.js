@@ -7,8 +7,12 @@ const anims = {
             y: 0, 
             transition: {
                 duration: 1, 
-                staggerChildren: .3
+                staggerChildren: .2
             }
+        },
+        hover: {
+            y: -10,
+            scale: 1.03,
         }
     },
     stackFromRight: {
@@ -41,6 +45,17 @@ const anims = {
             x: 0,
             transition: {
                 duration: 1
+            }
+        }
+    },
+    itemFast: {
+        hidden: {opacity: 0, x: 0, y: 100},
+        visible: {
+            opacity: 1, 
+            y: 0,
+            x: 0,
+            transition: {
+                duration: .5
             }
         }
     },

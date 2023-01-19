@@ -2,20 +2,21 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import SwiperContainer from '../SwiperContainer'
 import {motion} from 'framer-motion'
 import anims from '../../content/framermotion'
+import getTexts from '../../content/translations'
 
-export default function Introduction(){
+export default function Introduction({lang}){
     const introImg = [
         {
             src: '/img/1refed.webp',
-            title: 'Reformas Edilicias'
+            title: getTexts(lang, 'introbanner1')
         },
         {
             src: '/img/2mantint.webp',
-            title: 'Mantenimiento Integral'
+            title: getTexts(lang, 'introbanner2')
         },
         {
             src: '/img/3telecom.webp',
-            title: 'Telecomunicaciones'
+            title: getTexts(lang, 'introbanner3')
         }
     ]
     return (
@@ -26,10 +27,10 @@ export default function Introduction(){
             whileInView='visible'
             variants={anims.container}
             className="text">
-                <motion.p variants={anims.item}>Ofrecemos una amplia gama de servicios que incluyen Telecomunicaciones, Obras y reformas edilicias, y mantenimiento integral correctivo y preventivo.</motion.p>
-                <motion.a variants={anims.item} href="#">
+                <motion.p variants={anims.item}>{getTexts(lang, 'introduction')}</motion.p>
+                <motion.a variants={anims.item} href="#servicios-anchor">
                     <motion.button variants={anims.item} className="btn white">
-                    Ver más
+                    {getTexts(lang, 'seemore')}
                     <ArrowForwardIcon/>
                     </motion.button>
                 </motion.a>

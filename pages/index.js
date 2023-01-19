@@ -12,30 +12,51 @@ import ServiceAssistance from '../components/ServiceAssistance'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import Script from 'next/script'
+import { useState } from 'react'
+import getTexts from '../content/translations'
+import Touch from '../components/Touch'
 
 export default function Home() {
-  
+  const [lang, setLang] = useState('es')
   return (
     <>
+      <Script id='preventscrollreset'>
+        history.scrollRestoration = &quot;manual&quot;
+      </Script>
       <Head>
-        <script>history.scrollRestoration = "manual"</script>
-        <title>Araser SRL | Telecomunicaciones y Obras Edilicias</title>
+        <title>{getTexts(lang, 'title')}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Ofrecemos una amplia gama de servicios que incluyen Telecomunicaciones, Obras y reformas edilicias, y mantenimiento integral correctivo y preventivo."/>
       </Head>
-      <NavBar/>
+      <NavBar lang={lang}/>
       <img className="main-background" src="/bg.jpg" alt="background image"/>
-      <HomeSection/>
-      <Introduction/>
-      <AboutUs/>
-      <Values/>
-      <Objective/>
-      <Clients/>
-      <Services/>
-      <ServicesDetails/>
-      <ServiceAssistance/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <HomeSection lang={lang}/>
+      <Introduction lang={lang}/>
+      <AboutUs lang={lang}/>
+      <Values lang={lang}/>
+      <Objective lang={lang}/>
+      <Clients lang={lang}/>
+      <Services lang={lang}/>
+      <ServicesDetails lang={lang}/>
+      <ServiceAssistance lang={lang}/>
+      <Projects lang={lang}/>
+      <Contact lang={lang}/>
+      <Footer lang={lang} setLang={setLang}/>
+      <Touch/>
+      <div className="whatsapp-icon">
+        <a href="https://wa.me/+5493816782424?text=Hola!%20Me%20gustar%C3%ADa%20consultar%20m%C3%A1s%20informaci%C3%B3n%20sobre...">
+          <img src="/wspicon.png" alt="whatsapp icon"/>
+        </a>
+      </div>
+      <div className="lang">
+        <a href="#" className="es" onClick={() => setLang('es')}>
+          <img src="/es.svg" alt="cambiar a idioma español" />
+        </a>
+        <a href="#" className="en" onClick={() => setLang('en')}>
+          <img src="/us.svg" alt="cambiar a idioma ingles" />
+        </a>
+      </div>
     </>
   )
 }

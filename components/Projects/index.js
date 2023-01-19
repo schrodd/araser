@@ -5,8 +5,9 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import ApartmentIcon from '@mui/icons-material/Apartment'
 import { motion } from "framer-motion"
+import getTexts from "../../content/translations.js"
 
-export default function Projects(){
+export default function Projects({lang}){
     const [projectIndex, setProjectIndex] = useState(0)
     function changeProject(dir) {
         if (dir == 'prev' && projects[projectIndex - 1]){
@@ -59,9 +60,9 @@ export default function Projects(){
             className="text">
                 <motion.div variants={animations.item} className='title'>
                     <ApartmentIcon fontSize='large'/>
-                    <motion.h2 variants={animations.item}>Proyectos</motion.h2>
+                    <motion.h2 variants={animations.item}>{getTexts(lang, 'proy')}</motion.h2>
                 </motion.div>
-                <motion.p variants={animations.item}>Lo que nos respalda como empresa son los casos de éxito que hemos llevado a cabo a lo largo de estos años, brindando confiabilidad y acompañamiento a nuestros clientes</motion.p>
+                <motion.p variants={animations.item}>{getTexts(lang, 'proydesc')}</motion.p>
                 <motion.div
                 className='project-desc'>
                     <motion.h3 variants={animations.item}>{projects[projectIndex].client}</motion.h3>
@@ -89,7 +90,7 @@ export default function Projects(){
                     return {src: e}
                 })}/>
             </motion.div>
-            
+            <a id='contacto-anchor'></a>
         </section>
     )
 }

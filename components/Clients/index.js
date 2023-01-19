@@ -1,8 +1,9 @@
 import HandshakeIcon from '@mui/icons-material/Handshake'
 import {motion} from 'framer-motion'
 import anims from '../../content/framermotion'
+import getTexts from '../../content/translations'
 
-export default function Clients(){
+export default function Clients({lang}){
     const clients = [
         '/img/clientes/alderetes.png',
         '/img/clientes/columbia.png',
@@ -26,10 +27,9 @@ export default function Clients(){
                 <motion.div
                 initial={{opacity: 0, x: -200}}
                 whileInView={{opacity: 1, x: 0}}
-                transition={{duration: 1, staggerChildren: .3}}
                 className='title'>
                     <HandshakeIcon fontSize='large'/>
-                    <motion.h2>Nuestros clientes</motion.h2>
+                    <motion.h2>{getTexts(lang, 'clients')}</motion.h2>
                 </motion.div>
                 <motion.div
                 initial='hidden'
@@ -37,7 +37,7 @@ export default function Clients(){
                 variants={anims.container}
                 className='clients'>
                     {clients.map((e,i) => (
-                    <motion.div variants={anims.item} key={i} className='item'>
+                    <motion.div variants={anims.itemFast} key={i} className='item'>
                         <motion.img src={e} alt="client"/>
                     </motion.div>
                     ))}

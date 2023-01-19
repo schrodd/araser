@@ -1,11 +1,12 @@
 import WifiIcon from '@mui/icons-material/Wifi'
 import SwiperContainer from '../SwiperContainer'
 import EngineeringIcon from '@mui/icons-material/Engineering'
-import ConstructionIcon from '@mui/icons-material/Engineering'
+import ConstructionIcon from '@mui/icons-material/Construction'
 import { motion } from 'framer-motion'
 import anims from '../../content/framermotion'
+import getTexts from '../../content/translations'
 
-export default function ServicesDetails(){
+export default function ServicesDetails({lang}){ 
     const telecomImages = [
             {src: '/img/servicios/TEL 1.webp'},
             {src: '/img/servicios/TEL 2.webp'},
@@ -15,31 +16,31 @@ export default function ServicesDetails(){
     const telecomGrid = [
         {
         src: '/svg/23.svg',
-        text: 'Diseño, ingeniería y despliegue de redes FTTH/GPON. Planta interna'
+        text: getTexts(lang, 'telecomdet1')
         },
         {
         src: '/svg/24.svg',
-        text: 'Construcción de redes de FO interurbana, canalizaciones, tuneleo dirigido'
+        text: getTexts(lang, 'telecomdet2')
         },
         {
         src: '/svg/19.svg',
-        text: 'Instalaciones domiciliarias de teléfono, cable TV e internet'
+        text: getTexts(lang, 'telecomdet3')
         },
         {
         src: '/svg/12.svg',
-        text: 'Mantenimiento de plantel de cable estructurado. Centrales'
+        text: getTexts(lang, 'telecomdet4')
         },
         {
         src: '/svg/20.svg',
-        text: 'Cambio e instalación de postes'
+        text: getTexts(lang, 'telecomdet5')
         },
         {
         src: '/svg/02.svg',
-        text: 'Instalación de cámaras de seguridad'
+        text: getTexts(lang, 'telecomdet6')
         },
         {
         src: '/svg/03.svg',
-        text: 'Redes informáticas'
+        text: getTexts(lang, 'telecomdet7')
         },
     ]
     const obrasImages = [
@@ -55,51 +56,51 @@ export default function ServicesDetails(){
     const obrasGrid = [
         {
         src: '/svg/16.svg',
-        text: 'Albañinería'
+        text: getTexts(lang, 'obrasdet1')
         },
         {
         src: '/svg/15.svg',
-        text: 'Instalación de Redes'
+        text: getTexts(lang, 'obrasdet2')
         },
         {
         src: '/svg/14.svg',
-        text: 'Vidrios'
+        text: getTexts(lang, 'obrasdet3')
         },
         {
         src: '/svg/13.svg',
-        text: 'Electricidad'
+        text: getTexts(lang, 'obrasdet4')
         },
         {
         src: '/svg/11.svg',
-        text: 'Plomería'
+        text: getTexts(lang, 'obrasdet5')
         },
         {
         src: '/svg/10.svg',
-        text: 'Cortinas Metálicas'
+        text: getTexts(lang, 'obrasdet6')
         },
         {
         src: '/svg/09.svg',
-        text: 'Pintura'
+        text: getTexts(lang, 'obrasdet7')
         },
         {
         src: '/svg/08.svg',
-        text: 'Gas'
+        text: getTexts(lang, 'obrasdet8')
         },
         {
         src: '/svg/07.svg',
-        text: 'Alarmas'
+        text: getTexts(lang, 'obrasdet9')
         },
         {
         src: '/svg/06.svg',
-        text: 'Cerrajería'
+        text: getTexts(lang, 'obrasdet10')
         },
         {
         src: '/svg/05.svg',
-        text: 'Carpintería'
+        text: getTexts(lang, 'obrasdet11')
         },
         {
         src: '/svg/04.svg',
-        text: 'Aire Acondicionado'
+        text: getTexts(lang, 'obrasdet12')
         },
     ]
     const integralImages = [
@@ -111,86 +112,93 @@ export default function ServicesDetails(){
     const integralGrid = [
         {
         src: '/svg/18.svg',
-        text: 'Mantenimiento preventivo y correctivo de edificios e infraestructura'
+        text: getTexts(lang, 'integraldet1')
         },
         {
         src: '/svg/01.svg',
-        text: 'Mantenimiento de espacios verdes por medio de cortes, podas, resiembras, etc'
+        text: getTexts(lang, 'integraldet2')
         },
         {
         src: '/svg/21.svg',
-        text: 'Fumigación integral, control integral de plagas y desinfección'
+        text: getTexts(lang, 'integraldet3')
         },
         {
         src: '/svg/22.svg',
-        text: 'Estudio físico, químico y bacteriológico del agua'
+        text: getTexts(lang, 'integraldet4')
         }
     ]
     return (
-        <section className='services-details'>
-            <motion.div
-            initial='hidden'
-            whileInView='visible'
-            variants={anims.stackFromLeft}
-            className='service telecom'>
-                <motion.div variants={anims.itemRight} className='text'>
-                    <WifiIcon fontSize='large'/>
-                    <motion.h3 variants={anims.itemRight}>Telecomunicaciones</motion.h3>
-                    <motion.p variants={anims.itemRight}>Realizamos Diseño e ingeniería para redes internas o externas, UTP, fibra óptica, enlace inalámbrico. Soluciones integrales de plantel exterior, Fiber to the Home (FTTH).</motion.p>
-                </motion.div>
-                <SwiperContainer imgs={telecomImages}/>
-                <motion.div variants={anims.itemRight} className='services-grid'>
-                    {telecomGrid.map((e,i) => (
-                    <motion.div variants={anims.itemRight} key={i} className="item">
-                        <motion.img variants={anims.itemRight} src={e.src} alt="item"/>
-                        <motion.p variants={anims.itemRight}>{e.text}</motion.p>
+        <>
+            <a style={{position: 'relative', top: '-110px'}}id='telecom-anchor'></a>
+            <section className='services-details'>
+                <motion.div
+                initial='hidden'
+                whileInView='visible'
+                variants={anims.container}
+                className='service telecom'>
+                    <motion.div variants={anims.item} className='text'>
+                        <WifiIcon fontSize='large'/>
+                        <motion.h3 variants={anims.item}>{getTexts(lang, 'telecom')}</motion.h3>
+                        <motion.p variants={anims.item}>{getTexts(lang, 'telecom1')}</motion.p>
                     </motion.div>
-                    ))}
-                </motion.div>
-                <motion.img className='bg-svg' src='/svg/whitelogo.svg' alt='logo'/>
-            </motion.div>
-            <motion.div
-            initial='hidden'
-            whileInView='visible'
-            variants={anims.stackFromRight}
-            className='service obras-reformas'>
-                <motion.div variants={anims.itemLeft} className='text'>
-                    <EngineeringIcon fontSize='large'/>
-                    <motion.h3 variants={anims.itemLeft}>Ejecución de obras y reformas edilicias</motion.h3>
-                    <motion.p variants={anims.itemLeft}>Realizamos Diseño e ingeniería para redes internas o externas, UTP, fibra óptica, enlace inalámbrico. Soluciones integrales de plantel exterior, Fiber to the Home (FTTH).</motion.p>
-                </motion.div>
-                <SwiperContainer imgs={obrasImages}/>
-                <motion.div variants={anims.itemLeft} className='services-grid-squares'>
-                    {obrasGrid.map((e,i) => (
-                    <motion.div variants={anims.itemLeft} key={i} className="item">
-                        <motion.img variants={anims.itemLeft} src={e.src} alt="item"/>
-                        <motion.p variants={anims.itemLeft}>{e.text}</motion.p>
+                    <SwiperContainer imgs={telecomImages}/>
+                    <motion.div variants={anims.item} className='services-grid'>
+                        {telecomGrid.map((e,i) => (
+                        <motion.div variants={anims.item} key={i} className="item">
+                            <motion.img variants={anims.item} src={e.src} alt="item"/>
+                            <motion.p variants={anims.item}>{e.text}</motion.p>
+                        </motion.div>
+                        ))}
                     </motion.div>
-                    ))}
+                    <motion.img className='bg-svg' src='/svg/whitelogo.svg' alt='logo'/>
                 </motion.div>
-                <motion.img className='bg-svg r' src='/svg/whitelogo.svg' alt='logo'/>
-            </motion.div>
-            <motion.div
-            initial='hidden'
-            whileInView='visible'
-            variants={anims.stackFromLeft}
-            className='service mantenimiento'>
-                <motion.div variants={anims.itemRight} className='text'>
-                    <ConstructionIcon fontSize='large'/>
-                    <motion.h3 variants={anims.itemRight}>Mantenimiento Integral</motion.h3>
-                    <motion.p variants={anims.itemRight}>Brindamos servicios de Mantenimiento integral garantizando el bienestar de su equipo y la calidad de sus instalaciones.</motion.p>
-                </motion.div>
-                <SwiperContainer imgs={integralImages}/>
-                <motion.div variants={anims.itemRight} className='services-grid'>
-                    {integralGrid.map((e,i) => (
-                    <motion.div variants={anims.itemRight} key={i} className="item">
-                        <motion.img variants={anims.itemRight} src={e.src} alt="item"/>
-                        <motion.p variants={anims.itemRight}>{e.text}</motion.p>
+                <a style={{position: 'relative', top: '-110px'}}id='obras-anchor'></a>
+                <a></a>
+                <motion.div
+                initial='hidden'
+                whileInView='visible'
+                variants={anims.container}
+                className='service obras-reformas'>
+                    <motion.div variants={anims.item} className='text'>
+                        <EngineeringIcon fontSize='large'/>
+                        <motion.h3 variants={anims.item}>{getTexts(lang, 'obras')}</motion.h3>
+                        <motion.p variants={anims.item}>{getTexts(lang, 'obras1')}</motion.p>
                     </motion.div>
-                    ))}
+                    <SwiperContainer imgs={obrasImages}/>
+                    <motion.div variants={anims.item} className='services-grid-squares'>
+                        {obrasGrid.map((e,i) => (
+                        <motion.div variants={anims.item} key={i} className="item">
+                            <motion.img variants={anims.item} src={e.src} alt="item"/>
+                            <motion.p variants={anims.item}>{e.text}</motion.p>
+                        </motion.div>
+                        ))}
+                    </motion.div>
+                    <motion.img className='bg-svg r' src='/svg/whitelogo.svg' alt='logo'/>
                 </motion.div>
-                <motion.img className='bg-svg' src='/svg/whitelogo.svg' alt='logo'/>
-            </motion.div>
-        </section>
+                <a style={{position: 'relative', top: '-110px'}}id='service-anchor'></a>
+                <a></a>
+                <motion.div
+                initial='hidden'
+                whileInView='visible'
+                variants={anims.container}
+                className='service mantenimiento'>
+                    <motion.div variants={anims.item} className='text'>
+                        <ConstructionIcon fontSize='large'/>
+                        <motion.h3 variants={anims.item}>{getTexts(lang, 'integral')}</motion.h3>
+                        <motion.p variants={anims.item}>{getTexts(lang, 'integral1')}</motion.p>
+                    </motion.div>
+                    <SwiperContainer imgs={integralImages}/>
+                    <motion.div variants={anims.item} className='services-grid'>
+                        {integralGrid.map((e,i) => (
+                        <motion.div variants={anims.item} key={i} className="item">
+                            <motion.img variants={anims.item} src={e.src} alt="item"/>
+                            <motion.p variants={anims.item}>{e.text}</motion.p>
+                        </motion.div>
+                        ))}
+                    </motion.div>
+                    <motion.img className='bg-svg' src='/svg/whitelogo.svg' alt='logo'/>
+                </motion.div>
+            </section>
+        </>
     )
 }

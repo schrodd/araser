@@ -1,8 +1,9 @@
 import { useScroll } from 'framer-motion'
 import { useEffect } from "react"
 import Social from "../Social"
+import getTexts from '../../content/translations'
 
-export default function NavBar(){
+export default function NavBar({lang}){
     const {scrollYProgress} = useScroll()
     function navBarBgUpdate(){
         const e = document.querySelector('header')
@@ -20,13 +21,13 @@ export default function NavBar(){
     return (
         <header>
             <a href="#"><img className="main-logo" src='/logo.svg' alt='Araser SRL logo'/></a>
-            <nav>
+            <nav className='pc'>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#nosotros-anchor">Nosotros</a></li>
-                    <li><a href="#servicios-anchor">Servicios</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#">{getTexts(lang, 'navhome')}</a></li>
+                    <li><a href="#nosotros-anchor">{getTexts(lang, 'navus')}</a></li>
+                    <li><a href="#servicios-anchor">{getTexts(lang, 'navserv')}</a></li>
+                    <li><a href="#projects">{getTexts(lang, 'navproy')}</a></li>
+                    <li><a href="#contacto-anchor">{getTexts(lang, 'navcont')}</a></li>
                 </ul>
             </nav>
             <Social/>
