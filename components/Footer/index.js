@@ -33,8 +33,8 @@ export default function Footer({lang, setLang}){
                 <div className="col two">
                     <div className="item">
                         <h3>{getTexts(lang, 'address')}</h3>
-                        <h4>Tucumán | Casa Central</h4>
-                        <p>Barrio APEM Mzna Ñ Casa 15, T4101 Las Talitas, Tucumán.</p>
+                        <h4>Tucumán | Oficina Central</h4>
+                        <p>Congreso 566 Piso 4° Oficina E. San Miguel de Tucumán.</p>
                         <h4>Córdoba | Sede</h4>
                         <p>27 de abril 2410. Córdoba Capital.</p>
                     </div>

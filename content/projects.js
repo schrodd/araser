@@ -20,7 +20,7 @@ const projects = [
         imgs: ['/proy/gire/1.webp', '/proy/gire/2.webp', '/proy/gire/3.webp', '/proy/gire/4.webp']
     },
     { // 5
-        client: 'Gire - Mercado Libre',
+        client: 'Mercado Libre',
         desc: 'Lugar: Mendoza. Se realiza trabajo de Electricidad.',
         imgs: ['/proy/gire2/1.webp', '/proy/gire2/2.webp', '/proy/gire2/3.webp']
     },
