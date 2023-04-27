@@ -8,15 +8,15 @@ export default function Introduction({lang}){
     const introImg = [
         {
             src: '/img/1refed.webp',
-            title: getTexts(lang, 'introbanner1')
+            title: getTexts(lang, 'introbanner3')
         },
         {
             src: '/img/2mantint.webp',
-            title: getTexts(lang, 'introbanner2')
+            title: getTexts(lang, 'introbanner1')
         },
         {
             src: '/img/3telecom.webp',
-            title: getTexts(lang, 'introbanner3')
+            title: getTexts(lang, 'introbanner2')
         }
     ]
     return (

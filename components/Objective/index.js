@@ -13,7 +13,7 @@ export default function Objective({lang}){
         {getTexts(lang, 'target')}
       </motion.p>
       <motion.div initial='hidden' whileInView='visible' variants={anims.container} className='por-que-elegirnos'>
-        <motion.img variants={anims.item} className='container-img' src="/img/elegirnos.webp" alt="Por que elegirnos"/>
+        <motion.img variants={anims.item} className='container-img' src="/img/elegirnos.jpg" alt="Por que elegirnos"/>
         <div className="arg-map">
           <Image src='/img/mapa.png' alt='mapa' fill/>
           <Image className='argentina' src='/img/mapa-arg.svg' alt='mapa argentina' fill/>
