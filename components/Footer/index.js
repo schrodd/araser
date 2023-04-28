@@ -1,10 +1,25 @@
 import Social from '../Social'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import getTexts from '../../content/translations'
+import Script from 'next/Script'
 
 export default function Footer({lang, setLang}){
     return (
         <footer>
+            <Script id="metricool">
+                {`function loadScript(a){
+                    var b=document.getElementsByTagName("head")[0];
+                    var c=document.createElement("script");
+                    c.type="text/javascript";
+                    c.src="https://tracker.metricool.com/resources/be.js";
+                    c.onreadystatechange=a;
+                    c.onload=a;
+                    b.appendChild(c);
+                  }
+                  loadScript(function(){
+                    beTracker.t({hash:"6801246ecc0e92f5618666edd03131e9"})
+                  })`}
+            </Script>
             <div className="wrapper">
                 <div className="col one">
                     <img className='logo' src='/svg/whitelogofull.svg' alt='logo'/>
