@@ -4,7 +4,7 @@ import Script from 'next/script'
 export default function Document() {
   return (
     <Html lang="en">
-      <Script strategy='afterInteractive'>
+      <Script id='metricool' strategy='afterInteractive'>
         {`function loadScript(a){
             var b=document.getElementsByTagName("head")[0];
             var c=document.createElement("script");

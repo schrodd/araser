@@ -28,6 +28,10 @@ export default function Home() {
         <title>{getTexts(lang, 'title')}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Ofrecemos una amplia gama de servicios que incluyen Telecomunicaciones, Obras y reformas edilicias, y mantenimiento integral correctivo y preventivo."/>
+        <meta name="keywords" content="Araser,Servicio de mantenimiento ,Mantenimiento a empresas,Reformas a empresas,Mantenimiento preventivo,Mantenimiento correctivo,Mantenimiento de edificio,Reparación a empresas,Limpieza de vidrios,reformas edilicias,mantenimiento edilicio"/>
+        <meta name="robots" content="index, follow"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="language" content="Spanish"/>
       </Head>
       <NavBar lang={lang}/>
       <img className="main-background" src="/bg.jpg" alt="background image"/>
