@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import NavBar from '../components/NavBar'
-import getTexts from '../content/translations'
+import NavBar from '../../components/NavBar'
+import getTexts from '../../content/translations'
 import { useState } from 'react'
 import HistoryEduSharpIcon from '@mui/icons-material/HistoryEduSharp';
-import tyc from '../content/tyc';
-import tycEn from '../content/tycEn';
-import Footer from '../components/Footer'
+import tyc from '../../content/tyc';
+import tycEn from '../../content/tycEn';
+import Footer from '../../components/Footer'
 import Link from 'next/link';
 
 function Section({title, text}) {
