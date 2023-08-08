@@ -94,7 +94,9 @@ const es = {
     navproy: 'Proyectos',
     navcont: 'Contacto',
     phones: 'Teléfonos',
-    phones1: 'Móvil: 381-6782424 | 388-4770198'
+    phones1: 'Móvil: 381-6782424 | 388-4770198',
+    tyctitle: 'Araser SRL | Términos y condiciones',
+    tyc: 'Términos y condiciones'
 }
 
 const en = {
@@ -193,7 +195,9 @@ const en = {
     navproy: 'Projects',
     navcont: 'Contact us',
     phones: 'Phone numbers',
-    phones1: 'Mobile: 381-6782424 | 388-4770198'
+    phones1: 'Mobile: 381-6782424 | 388-4770198',
+    tyctitle: 'Araser SRL | Terms and Conditions',
+    tyc: 'Terms and Conditions'
 }
 
 function getTexts(lang, text){

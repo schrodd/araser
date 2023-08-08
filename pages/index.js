@@ -30,7 +30,7 @@ export default function Home() {
         <meta name="description" content="Ofrecemos una amplia gama de servicios que incluyen Telecomunicaciones, Obras y reformas edilicias, y mantenimiento integral correctivo y preventivo."/>
         <meta name="keywords" content="Araser,Servicio de mantenimiento ,Mantenimiento a empresas,Reformas a empresas,Mantenimiento preventivo,Mantenimiento correctivo,Mantenimiento de edificio,Reparación a empresas,Limpieza de vidrios,reformas edilicias,mantenimiento edilicio"/>
         <meta name="robots" content="index, follow"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="language" content="Spanish"/>
       </Head>
       <NavBar lang={lang}/>

@@ -1,7 +1,8 @@
 import Social from '../Social'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'
 import getTexts from '../../content/translations'
-import Script from 'next/Script'
+import Script from 'next/script'
+import Link from 'next/link'
 
 export default function Footer({lang, setLang}){
     return (
@@ -31,6 +32,7 @@ export default function Footer({lang, setLang}){
                             <li><a href="#servicios-anchor">{getTexts(lang, 'navserv')}</a></li>
                             <li><a href="#projects">{getTexts(lang, 'navproy')}</a></li>
                             <li><a href="#contacto-anchor">{getTexts(lang, 'navcont')}</a></li>
+                            <li><Link href="/terminos-y-condiciones">{getTexts(lang, 'tyc')}</Link></li>
                         </ul>
                     </div>
                     <div className="item flags">
