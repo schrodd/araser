@@ -1,7 +1,7 @@
 const es = {
     title: 'Araser SRL | Telecomunicaciones y Obras Edilicias',
     homeh1: 'Empresa de Telecomunicaciones y Obras Edilicias',
-    homeh2: 'Proveemos servicios a empresas, locales comerciales y entidades bancarias. Contamos con una amplia trayectoria en el rubro de las telecomunicaciones, obras y reformas edilicias y mantenimiento integral en todo el país',
+    homeh2: 'Proveemos servicios a empresas, locales comerciales y entidades bancarias. Contamos con una amplia trayectoria en el rubro de las telecomunicaciones, obras y reformas edilicias y mantenimiento integral en todo el país.',
     introduction: 'Ofrecemos una amplia gama de servicios que incluyen Telecomunicaciones, Obras y reformas edilicias, y mantenimiento integral correctivo y preventivo.',
     seemore: 'Ver más',
     introbanner1: 'Mantenimiento Integral',
