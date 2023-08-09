@@ -7,6 +7,7 @@ import tyc from '../../content/tyc';
 import tycEn from '../../content/tycEn';
 import Footer from '../../components/Footer'
 import Link from 'next/link';
+import Touch from '../../components/Touch';
 
 function Section({title, text}) {
   return (
@@ -60,6 +61,7 @@ export default function Tyc() {
         </div>
       </main>
       <Footer lang={lang} setLang={setLang}/>
+      <Touch/>
     </>
   )
 }

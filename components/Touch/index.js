@@ -5,9 +5,7 @@ export default function Touch(){
             <p>Copyright © {year} Araser SRL</p>
             <div>
                 <p>Desarrollado por</p>
-                <a href='https://www.touchandgrow.com.ar/' rel='noopener noreferrer' target='_blank'>
-                    <img src="/touch.svg" alt="Touch logo"/>
-                </a>
+                <img src="/touch.svg" alt="Touch logo"/>
             </div>
         </section>
     )
